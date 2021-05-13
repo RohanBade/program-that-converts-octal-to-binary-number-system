@@ -14,7 +14,12 @@ class NumberSystem:
         a= str(self.number)
         if a in NumberSystem.octal_dict.keys():
             print(NumberSystem.octal_dict[a])
+        else:
+            result = ""
+            for i in a:
+                result +=NumberSystem.octal_dict[i]
+            print(result)
 
 
-octalnum = NumberSystem(7)
+octalnum = NumberSystem(71)
 octalnum.convert_octal_to_binary()
